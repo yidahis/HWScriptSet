@@ -12,11 +12,15 @@ def getOutputContent(name):
     f = open(name, 'r')
     data = f.read()
     f.close()
-    return markdown.markdown(data)
+    result = markdown.markdown(data)
+    print result
+    return result
 
-def send(subject):
+def send():
     config = ConfigParser.ConfigParser()
     config.read("default.cfg")
+
+    subject = 'email test'
     server = config.get('email','server')
     username = config.get('email','username')
     password = config.get('email','password')
@@ -26,17 +30,18 @@ def send(subject):
     msg['Subject'] = subject
     msg['From'] = username
     msg['To'] = sendTo
+
     content = MIMEText(getOutputContent('/Users/chenzhiying/Desktop/markDowntest.md'), 'html', 'utf-8')
     msg.attach(content)
 
-    try:
-        smtpObj = smtplib.SMTP() 
-        smtpObj.connect(server, 25)    # 25 为 SMTP 端口号
-        smtpObj.login(username,password)  
-        smtpObj.sendmail(username, sendTo, msg.as_string())
-        print "邮件发送成功"
-    except smtplib.SMTPException:
-        print "Error: 无法发送邮件"
+    # try:
+    #     smtpObj = smtplib.SMTP() 
+    #     smtpObj.connect(server, 25)    # 25 为 SMTP 端口号
+    #     smtpObj.login(username,password)  
+    #     smtpObj.sendmail(username, sendTo, msg.as_string())
+    #     print "邮件发送成功"
+    # except smtplib.SMTPException:
+    #     print "Error: 无法发送邮件"
 
 
 
@@ -47,4 +52,4 @@ if __name__ == '__main__':
     reload(sys)  
     sys.setdefaultencoding('utf8')
 
-    send('今天')
+    send()
