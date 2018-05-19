@@ -2,14 +2,16 @@
 # 替换
 
 
-# searchPath="/Users/chenzhiying/Desktop/YYWork/entmobile-ios_7.6_composite_feature"
-searchPath="/Users/chenzhiying/Desktop/YYWork/entmobile-ios_7.7_maint"
+# searchPath="/Users/chenzhiying/Desktop/YYWork/entmobile-ios_7.8_composite_feature"
+# searchPath="/Users/chenzhiying/Desktop/YYWork/entmobile-ios_7.7.10_tech_feature/ChannelProject/BaseService"
+searchPath="/Users/chenzhiying/Desktop/YYWork/entmobile-ios_7.7.10_tech_feature"
 
-targetStr="#include"
-replaceStr="#import"
 
-# targetStr2="#import \"YYImContainerFactory.h\""
-# replaceStr2="#import \"IYYImContainerFactory.h\""
+targetStr="#import \"UIViewController+YYAttemptRotation.h\""
+replaceStr=""
+
+# targetStr2="#import \"YYHTTPSConfigCore.h\""
+# replaceStr2="#import \"IYYHTTPSConfigCore.h\""
 
 whiteList=("")
 

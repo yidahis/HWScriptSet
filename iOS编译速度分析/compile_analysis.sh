@@ -2,7 +2,7 @@
 # 编译分析
 
 logTargetPath="/Users/chenzhiying/Desktop/Data/YYMobile_compile_log/"
-projectPath="/Users/chenzhiying/Desktop/YYWork/entmobile-ios_7.7_maint"
+projectPath="/Users/chenzhiying/Desktop/YYWork/entmobile-ios_7.8_composite_feature"
 
 # log文件生成
 cd ${logTargetPath}
@@ -19,8 +19,8 @@ xcodebuild clean -workspace YYMobile.xcworkspace -scheme YYMobile -configuration
 echo "clean finished !!"
 
 echo "compile start..."
-xcodebuild -configuration Release -workspace YYMobile.xcworkspace -scheme YYMobile | xcpretty | gnomon > ${logPath}
-# xcodebuild archive -workspace YYMobile.xcworkspace -scheme YYMobile -archivePath "${logTargetPath}YYMobile.xcarchive" | xcpretty | gnomon > ${logPath}
+# xcodebuild -configuration Release -workspace YYMobile.xcworkspace -scheme YYMobile | xcpretty | gnomon > ${logPath}
+xcodebuild archive -workspace YYMobile.xcworkspace -scheme YYMobile -archivePath "${logTargetPath}YYMobile.xcarchive" | xcpretty | gnomon > ${logPath}
 echo "compile finished !!"
 
 # 分析文件的生成

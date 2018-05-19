@@ -1,7 +1,7 @@
 #!/bin/bash
 # 寻找使用 [NSUserDefaults standardUserDefaults]
 
-searchPath="/Users/chenzhiying/Desktop/YYWork/entmobile-ios_7.5_composite_feature"
+searchPath="/Users/chenzhiying/Desktop/YYWork/entmobile-ios_7.8_composite_feature"
 
 userDefaults="GetCoreI(IChannelCore).currentChannelInfo"
 
