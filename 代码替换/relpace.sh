@@ -2,12 +2,11 @@
 # 替换
 
 
-# searchPath="/Users/chenzhiying/Desktop/YYWork/entmobile-ios_7.8_composite_feature"
-# searchPath="/Users/chenzhiying/Desktop/YYWork/entmobile-ios_7.7.10_tech_feature/ChannelProject/BaseService"
-searchPath="/Users/chenzhiying/Desktop/YYWork/entmobile-ios_7.7.10_tech_feature"
+searchPath="/Users/chenzhiying/Desktop/YYWork/entmobile-ios_7.9_composite_feature"
+# searchPath="/Users/chenzhiying/Desktop/YYWork/entmobile-ios_7.8_maint"
 
 
-targetStr="#import \"UIViewController+YYAttemptRotation.h\""
+targetStr="#import \"YYPayOne[a-zA-Z\.]*\""
 replaceStr=""
 
 # targetStr2="#import \"YYHTTPSConfigCore.h\""
