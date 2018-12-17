@@ -2,21 +2,20 @@
 # 替换
 
 
-searchPath="/Users/chenzhiying/Desktop/YYWork/entmobile-ios_7.9_composite_feature"
-# searchPath="/Users/chenzhiying/Desktop/YYWork/entmobile-ios_7.8_maint"
+searchPath="/Users/chenzhiying/Desktop/YYWork/entmobile-ios_7.12_composite_feature"
 
 
-targetStr="#import \"YYPayOne[a-zA-Z\.]*\""
-replaceStr=""
+targetStr="LogAppReview"
+replaceStr="LogAppRw"
 
-# targetStr2="#import \"YYHTTPSConfigCore.h\""
-# replaceStr2="#import \"IYYHTTPSConfigCore.h\""
+# targetStr2="#import \"[a-zA-Z\.]\>"
+# replaceStr2="#import \"[a-zA-Z\.]\""
 
 whiteList=("")
 
 # importStr="#import \"YYUserDefaults.h\""
 
-result=$(grep -r -n -l --exclude-dir=".svn" --exclude-dir="YYMobileUITests" --exclude-dir="Pods" --exclude-dir="xcuserdata" --exclude-dir="*.xcassets" --exclude-dir="*.framework" --include="*.m" --include="*.h" --include="*.mm" "$targetStr" $searchPath)
+result=$(grep -r -n -l --exclude-dir=".svn" --exclude-dir="YYMobileUITests" --exclude-dir="Pods" --exclude-dir="xcuserdata" --exclude-dir="*.xcassets" --exclude-dir="*.framework" --include="*.m" --include="*.h" --include="*.cpp" --include="*.mm" "$targetStr" $searchPath)
 
 
 for file in ${result}; do

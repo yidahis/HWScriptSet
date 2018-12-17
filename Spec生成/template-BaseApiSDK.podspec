@@ -1,4 +1,4 @@
-source = { :git => 'http://code.yy.com/ios_team/BaseApiSDK.git'}
+source = { :git => 'https://git.yy.com/opensource/ios_team/BaseApiSDK.git'}
 source[:tag] = "v#{version}"
 Pod::Spec.new do |s|
   s.name             = "BaseApiSDK"
@@ -19,17 +19,12 @@ Pod::Spec.new do |s|
     spec.ios.dependency 'BaseApiSDK/JSONCategory'
     spec.dependency 'ZipArchive'
     spec.dependency 'SZTextView'
-  #  spec.dependency 'AFNetworking/Serialization'
-  #  spec.dependency 'AFNetworking/Security'
-  #  spec.dependency 'AFNetworking/Reachability'
-  #  spec.dependency 'AFNetworking/NSURLSession'
-  #  spec.dependency 'AFNetworking/UIKit'
     spec.dependency 'JSONModel'
     spec.dependency 'RaptureXML'
     spec.dependency 'AMapSearch-NO-IDFA', '5.2.1'
     spec.dependency 'AMapFoundation-NO-IDFA', '1.4.3'
     spec.dependency 'KVOController'
-    spec.dependency 'openssl-dynamic'
+    spec.dependency 'OpenSSL-YY', '111.6717.1'
   end
   s.subspec 'JSONCategory' do |spec|
     spec.prefix_header_file = 'BaseApiSDK/BaseApiSDK-Prefix.pch'

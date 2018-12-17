@@ -5,7 +5,7 @@
 [ $# -lt 1 ] && echo "need new version!" && return
 
 specPath="/Users/chenzhiying/Desktop/GitLab-YY/Spec/BaseApiSDK"
-templatePath="/Users/chenzhiying/Desktop/Github/HWScriptSet/Spec生成/template-BaseApiSDK.podspec"
+templatePath="/Users/chenzhiying/Desktop/HWScriptSet/Spec生成/template-BaseApiSDK.podspec"
 
 specName="BaseApiSDK.podspec"
 templateName="template-BaseApiSDK.podspec"
